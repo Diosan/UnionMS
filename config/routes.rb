@@ -1,4 +1,10 @@
 UnionMS::Application.routes.draw do
+  resources :people
+
+
+  resources :organizations
+
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
