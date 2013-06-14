@@ -1,4 +1,7 @@
 UnionMS::Application.routes.draw do
+  resources :employees
+
+
   resources :people
 
 
