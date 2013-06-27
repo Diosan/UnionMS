@@ -14,7 +14,7 @@ ActiveAdmin.register Person do
         f.input :last_name
       end
       f.inputs "Content" do
-        f.input :description
+        f.input :body
       end
       f.actions
     end

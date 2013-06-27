@@ -73,6 +73,9 @@ GEM
       actionpack (>= 3.0)
     has_scope (0.5.1)
     hike (1.2.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.1)
     inherited_resources (1.4.0)
       has_scope (~> 0.5.0)
@@ -84,6 +87,8 @@ GEM
     jquery-ui-rails (4.0.3)
       jquery-rails
       railties (>= 3.1.0)
+    jquery-ui-themes (0.0.11)
+      httparty
     json (1.8.0)
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
@@ -98,6 +103,7 @@ GEM
       polyamorous (~> 0.5.0)
     mime-types (1.23)
     multi_json (1.7.6)
+    multi_xml (0.5.4)
     orm_adapter (0.4.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -160,6 +166,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails (= 2.3.0)
   jquery-ui-rails
+  jquery-ui-themes
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   sqlite3
