@@ -28,6 +28,8 @@ gem 'jquery-ui-themes'
 
 gem "activeadmin", github: "gregbell/active_admin"
 
+gem "railroady"
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
