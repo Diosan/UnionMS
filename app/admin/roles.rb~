@@ -5,7 +5,7 @@ ActiveAdmin.register Role do
     f.inputs "Role Details" do       
       f.input :name
       f.input :description
-      f.input :permissions, :as => :check_boxes, :required => false
+      f.input :permissions, :as => :check_boxes, :required => false 
     end
                                
     f.actions                         

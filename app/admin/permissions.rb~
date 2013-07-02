@@ -1,0 +1,12 @@
+ActiveAdmin.register Permission do
+   menu :parent => "Admin Users"
+        
+  form do |f|                         
+    f.inputs "Role Details" do       
+      f.input :name                  
+      f.input :description 
+    end
+                               
+    f.actions                         
+  end
+end

@@ -1,0 +1,6 @@
+class UserRole < ActiveRecord::Base
+  belongs_to :admin_user
+  belongs_to :role
+  has_many :users, :through :role
+  # attr_accessible :title, :body
+end
