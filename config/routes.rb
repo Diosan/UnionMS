@@ -1,4 +1,10 @@
 UnionMS::Application.routes.draw do
+  resources :resources
+
+
+  resources :actions
+
+
   resources :role_permissions
 
 

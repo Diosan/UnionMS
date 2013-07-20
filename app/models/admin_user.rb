@@ -4,6 +4,7 @@ class AdminUser < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   has_many :user_roles
   has_many :roles, :through => :user_roles
+  has_many :permissions, :through => :roles
 
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
