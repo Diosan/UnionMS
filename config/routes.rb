@@ -1,4 +1,22 @@
 UnionMS::Application.routes.draw do
+  resources :resources
+
+
+  resources :actions
+
+
+  resources :role_permissions
+
+
+  resources :permissions
+
+
+  resources :user_roles
+
+
+  resources :roles
+
+
   resources :employees
 
 

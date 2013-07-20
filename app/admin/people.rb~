@@ -1,11 +1,15 @@
 ActiveAdmin.register Person do
-  index do
-    column :first_name
-    default_actions
-  end
   
-  index :as => :grid do |person|
-    person.last_name
+  show do
+      h3 person.first_name
+      AdminUser.first.roles.each do |role|
+           role.role_permissions do | role_permission |
+			div do
+        			puts AdminUser.first.roles.first.role_permissions.first.permission.name
+      			end
+           end
+        end
+      
   end
 
   form do |f|
@@ -14,7 +18,7 @@ ActiveAdmin.register Person do
         f.input :last_name
       end
       f.inputs "Content" do
-        f.input :body
+        f.input :description
       end
       f.actions
     end

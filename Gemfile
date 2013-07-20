@@ -24,7 +24,7 @@ gem "jquery-rails", "2.3.0"
 
 gem "jquery-ui-rails"
 
-gem 'jquery-ui-themes'
+gem "jquery-ui-themes"
 
 gem "activeadmin", github: "gregbell/active_admin"
 

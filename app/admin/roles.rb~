@@ -1,0 +1,14 @@
+ActiveAdmin.register Role do
+   menu :parent => "Admin Users"
+
+   form do |f|                         
+    f.inputs "Role Details" do       
+      f.input :name
+      f.input :description
+      f.input :permissions, :as => :check_boxes, :required => false 
+    end
+                               
+    f.actions                         
+  end
+
+end

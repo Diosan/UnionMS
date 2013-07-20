@@ -1,0 +1,9 @@
+class RemoveActionFromPermission < ActiveRecord::Migration
+  def up
+    remove_column :permissions, :resource
+  end
+
+  def down
+    add_column :permissions, :resource, :reference
+  end
+end

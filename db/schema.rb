@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614035611) do
+ActiveRecord::Schema.define(:version => 20130708145219) do
+
+  create_table "actions", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -71,5 +78,51 @@ ActiveRecord::Schema.define(:version => 20130614035611) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "permissions", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "action_id"
+    t.integer  "resource_id"
+  end
+
+  add_index "permissions", ["action_id"], :name => "index_permissions_on_action_id"
+  add_index "permissions", ["resource_id"], :name => "index_permissions_on_resource_id"
+
+  create_table "resources", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "role_permissions", :force => true do |t|
+    t.integer  "role_id"
+    t.integer  "permission_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "role_permissions", ["permission_id"], :name => "index_role_permissions_on_permission_id"
+  add_index "role_permissions", ["role_id"], :name => "index_role_permissions_on_role_id"
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "user_roles", :force => true do |t|
+    t.integer  "admin_user_id"
+    t.integer  "role_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "user_roles", ["admin_user_id"], :name => "index_user_roles_on_admin_user_id"
+  add_index "user_roles", ["role_id"], :name => "index_user_roles_on_role_id"
 
 end
