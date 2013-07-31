@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  become_nonfinancial: 
+  become_lapsed: 
+  description: MyText
+
+two:
+  name: MyString
+  become_nonfinancial: 
+  become_lapsed: 
+  description: MyText

@@ -1,0 +1,29 @@
+<h1>Listing membership_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Become nonfinancial</th>
+    <th>Become lapsed</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @membership_types.each do |membership_type| %>
+  <tr>
+    <td><%= membership_type.name %></td>
+    <td><%= membership_type.become_nonfinancial %></td>
+    <td><%= membership_type.become_lapsed %></td>
+    <td><%= membership_type.description %></td>
+    <td><%= link_to 'Show', membership_type %></td>
+    <td><%= link_to 'Edit', edit_membership_type_path(membership_type) %></td>
+    <td><%= link_to 'Destroy', membership_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Membership type', new_membership_type_path %>

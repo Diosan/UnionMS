@@ -2,11 +2,11 @@ class ScorecardAuthorization < ActiveAdmin::AuthorizationAdapter
 
      #def authorized?(action, subject = nil)
      #   case subject
-     #   when normalize(Person)
+     #   when normalized(Person)
 
           # Only let the author update and delete posts
      #     if action == :update || action == :destroy
-     #       subject.author == user
+            #subject.author == user
 
           # If it's not an update or destroy, anyone can view it
      #     else

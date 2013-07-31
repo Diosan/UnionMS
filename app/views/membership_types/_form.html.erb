@@ -1,0 +1,33 @@
+<%= form_for(@membership_type) do |f| %>
+  <% if @membership_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@membership_type.errors.count, "error") %> prohibited this membership_type from being saved:</h2>
+
+      <ul>
+      <% @membership_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :become_nonfinancial %><br />
+    <%= f.text_field :become_nonfinancial %>
+  </div>
+  <div class="field">
+    <%= f.label :become_lapsed %><br />
+    <%= f.text_field :become_lapsed %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

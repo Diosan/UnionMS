@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @membership_type.name %>
+</p>
+
+<p>
+  <b>Become nonfinancial:</b>
+  <%= @membership_type.become_nonfinancial %>
+</p>
+
+<p>
+  <b>Become lapsed:</b>
+  <%= @membership_type.become_lapsed %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @membership_type.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_membership_type_path(@membership_type) %> |
+<%= link_to 'Back', membership_types_path %>

@@ -1,4 +1,10 @@
 UnionMS::Application.routes.draw do
+  resources :members
+
+
+  resources :membership_types
+
+
   resources :resources
 
 

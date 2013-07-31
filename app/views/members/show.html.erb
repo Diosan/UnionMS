@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Membership type:</b>
+  <%= @member.membership_type %>
+</p>
+
+<p>
+  <b>Employee:</b>
+  <%= @member.employee %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @member.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @member.end_date %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @member.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
