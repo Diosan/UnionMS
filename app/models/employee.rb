@@ -1,5 +1,9 @@
 class Employee < ActiveRecord::Base
   belongs_to :organization
   belongs_to :person
-  attr_accessible :employer_reference
+  def name
+	person.name     
+  end
+
+  attr_accessible :employer_reference, :organization_id, :person_id
 end
