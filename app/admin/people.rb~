@@ -2,14 +2,9 @@ ActiveAdmin.register Person do
   
   show do
       h3 person.first_name
-      AdminUser.first.roles.each do |role|
-           role.role_permissions do | role_permission |
-			div do
-        			puts AdminUser.first.roles.first.role_permissions.first.permission.name
-      			end
-           end
-        end
-      
+      div do
+          AdminUser.first.roles.first.role_permissions.first.permission.name
+      end
   end
 
   form do |f|
