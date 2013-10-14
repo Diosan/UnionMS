@@ -109,6 +109,7 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    qif (1.1.1)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -186,6 +187,7 @@ DEPENDENCIES
   jquery-rails (= 2.3.0)
   jquery-ui-rails
   jquery-ui-themes
+  qif
   railroady
   rails (= 3.2.13)
   resque

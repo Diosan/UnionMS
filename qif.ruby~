@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'fileutils'
+
+if ARGV.size < 1 
+	puts "Usage: #{$0} file.qif"
+	exit
+end
+
+input = File.new(ARGV[0])
+output = [File.basename(ARGV[0]).split('.')[0..-2], 'csv'].join('.')
+output = File.new(output, 'w+')
+output.write("date,amount,description,transaction id, address\n")
+entries = input.read.split("^\n")
+entries.compact
+
+#for entry in entries
+#	e = entry.match(/D(.*)\nT-?(.*)\nP(.*)\nN(.*)\nA(.*)\n/).to_a[1..-1]
+#	e[1] = e[1].to_f
+#	e[-1] = "\"#{e[-1]}\""
+#	output.write("#{e.join(',')}\n")
+#end
